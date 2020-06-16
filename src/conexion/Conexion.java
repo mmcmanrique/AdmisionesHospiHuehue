@@ -20,7 +20,7 @@ public class Conexion {
     public Connection getConexion(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conection = DriverManager.getConnection("jdbc:mysql://192.168.15.214:3306/crud_java", "root", "");
+            conection = DriverManager.getConnection("jdbc:mysql://localhost/crud_java", "root", "");
             return conection;
         } catch (ClassNotFoundException | SQLException ex) {
             return null;

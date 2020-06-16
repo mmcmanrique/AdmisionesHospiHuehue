@@ -13,6 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -131,15 +132,15 @@ public class Funciones {
         String sql = "";
         
         if(buscar.equals("")){
-            sql = Sentencias.LISTAR;
+            //sql = Sentencias.LISTAR;
         }else{
             sql = "SELECT * FROM usuarios WHERE ("
-                    + "historiaclinica LIKE'%"+buscar+"%' OR "
+                    /*+ "historiaclinica LIKE'%"+buscar+"%' OR "
                     + "nombres LIKE'%"+buscar+"%' OR "
                     + "apellido1 LIKE'%"+buscar+"%' OR "
                     + "apellido2 LIKE'%"+buscar+"%' OR "
-                    + "nombrepadre LIKE'%"+buscar+"%' OR "
-                    + "nombremadre LIKE'%"+buscar+"%'"
+                    + "nombrepadre LIKE'%"+buscar+"%' OR "*/
+                    + "historiaclinica LIKE'%"+buscar+"%'"
                     + ")";
         }
         

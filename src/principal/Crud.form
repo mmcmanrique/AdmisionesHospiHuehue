@@ -126,7 +126,11 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="rSPanelShadow1" min="-2" pref="533" max="-2" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="rSPanelShadow1" min="-2" pref="625" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -160,19 +164,11 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="btnImprimir1" min="-2" pref="223" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnImprimir2" min="-2" pref="223" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnImprimir3" min="-2" pref="223" max="-2" attributes="0"/>
+                              <Component id="btnGuardarArchivos" min="-2" pref="249" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="sComboBox1" min="-2" pref="160" max="-2" attributes="0"/>
+                              <Component id="comboTipodeBusqueda" min="-2" pref="160" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="txtBuscar" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="sComboBox2" min="-2" pref="160" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txtBuscar1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -187,18 +183,12 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnNuevo" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnImprimir1" alignment="3" max="32767" attributes="0"/>
-                          <Component id="btnImprimir2" alignment="3" max="32767" attributes="0"/>
                           <Component id="txtBuscar" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="sComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnImprimir3" alignment="3" max="32767" attributes="0"/>
+                          <Component id="comboTipodeBusqueda" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnGuardarArchivos" alignment="3" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtBuscar1" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="sComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="311" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="442" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -408,7 +398,7 @@
                   <Color blue="33" green="7e" red="0" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="INFORME DE NACIMIENTO"/>
-                <Property name="toolTipText" type="java.lang.String" value="REGISTRAR USUARIO"/>
+                <Property name="toolTipText" type="java.lang.String" value="GENERAR INFORME DE NACIMIENTO"/>
                 <Property name="icons" type="rojeru_san.efectos.ValoresEnum$ICONS" editor="org.netbeans.modules.form.editors.EnumEditor">
                   <Value id="PREGNANT_WOMAN"/>
                 </Property>
@@ -417,77 +407,31 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnImprimir1ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="rsmaterialcomponents.RSButtonMaterialIconUno" name="btnImprimir2">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="33" green="7e" red="0" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="GUARDAR EMER &amp; KOICA"/>
-                <Property name="toolTipText" type="java.lang.String" value="REGISTRAR USUARIO"/>
-                <Property name="icons" type="rojeru_san.efectos.ValoresEnum$ICONS" editor="org.netbeans.modules.form.editors.EnumEditor">
-                  <Value id="SAVE"/>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnImprimir2ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="org.bolivia.combo.SComboBox" name="sComboBox1">
+            <Component class="org.bolivia.combo.SComboBox" name="comboTipodeBusqueda">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="3">
+                  <StringArray count="4">
                     <StringItem index="0" value="No. Historia Clinica"/>
-                    <StringItem index="1" value="Nombre"/>
+                    <StringItem index="1" value="Nombre Completo"/>
                     <StringItem index="2" value="Nombre del Padre"/>
+                    <StringItem index="3" value="Nombre de la Madre"/>
                   </StringArray>
                 </Property>
               </Properties>
             </Component>
-            <Component class="rsmaterialcomponents.RSTextFieldIconUno" name="txtBuscar1">
-              <Properties>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="33" green="7e" red="0" type="rgb"/>
-                </Property>
-                <Property name="borderColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="33" green="7e" red="0" type="rgb"/>
-                </Property>
-                <Property name="colorIcon" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="33" green="7e" red="0" type="rgb"/>
-                </Property>
-                <Property name="icons" type="rojeru_san.efectos.ValoresEnum$ICONS" editor="org.netbeans.modules.form.editors.EnumEditor">
-                  <Value id="SEARCH"/>
-                </Property>
-                <Property name="placeholder" type="java.lang.String" value="BUSCAR..."/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBuscar1ActionPerformed"/>
-                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtBuscar1KeyReleased"/>
-              </Events>
-            </Component>
-            <Component class="org.bolivia.combo.SComboBox" name="sComboBox2">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="3">
-                    <StringItem index="0" value="Nombre de la Madre"/>
-                    <StringItem index="1" value="Residencia"/>
-                    <StringItem index="2" value="M&#xe9;dico"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="rsmaterialcomponents.RSButtonMaterialIconUno" name="btnImprimir3">
+            <Component class="rsmaterialcomponents.RSButtonMaterialIconUno" name="btnGuardarArchivos">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="7e" red="0" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="GUARDAR COEX"/>
-                <Property name="toolTipText" type="java.lang.String" value="REGISTRAR USUARIO"/>
+                <Property name="text" type="java.lang.String" value="GUARDAR KOIKA, EMER, COEX"/>
+                <Property name="toolTipText" type="java.lang.String" value="GUARDA CUALQUIER ARCHIVO DE CUALQUIER SERVICIO (KOICA, EMER Y COEX)"/>
                 <Property name="icons" type="rojeru_san.efectos.ValoresEnum$ICONS" editor="org.netbeans.modules.form.editors.EnumEditor">
                   <Value id="SAVE"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnImprimir3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarArchivosActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

@@ -62,11 +62,8 @@ public class Crud extends javax.swing.JFrame {
         btnNuevo = new rsmaterialcomponents.RSButtonMaterialIconUno();
         txtBuscar = new rsmaterialcomponents.RSTextFieldIconUno();
         btnImprimir1 = new rsmaterialcomponents.RSButtonMaterialIconUno();
-        btnImprimir2 = new rsmaterialcomponents.RSButtonMaterialIconUno();
-        sComboBox1 = new org.bolivia.combo.SComboBox();
-        txtBuscar1 = new rsmaterialcomponents.RSTextFieldIconUno();
-        sComboBox2 = new org.bolivia.combo.SComboBox();
-        btnImprimir3 = new rsmaterialcomponents.RSButtonMaterialIconUno();
+        comboTipodeBusqueda = new org.bolivia.combo.SComboBox();
+        btnGuardarArchivos = new rsmaterialcomponents.RSButtonMaterialIconUno();
 
         menu.setBackground(new java.awt.Color(0, 126, 51));
 
@@ -231,7 +228,7 @@ public class Crud extends javax.swing.JFrame {
 
         btnImprimir1.setBackground(new java.awt.Color(0, 126, 51));
         btnImprimir1.setText("INFORME DE NACIMIENTO");
-        btnImprimir1.setToolTipText("REGISTRAR USUARIO");
+        btnImprimir1.setToolTipText("GENERAR INFORME DE NACIMIENTO");
         btnImprimir1.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.PREGNANT_WOMAN);
         btnImprimir1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -239,43 +236,15 @@ public class Crud extends javax.swing.JFrame {
             }
         });
 
-        btnImprimir2.setBackground(new java.awt.Color(0, 126, 51));
-        btnImprimir2.setText("GUARDAR EMER & KOICA");
-        btnImprimir2.setToolTipText("REGISTRAR USUARIO");
-        btnImprimir2.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.SAVE);
-        btnImprimir2.addActionListener(new java.awt.event.ActionListener() {
+        comboTipodeBusqueda.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No. Historia Clinica", "Nombre Completo", "Nombre del Padre", "Nombre de la Madre" }));
+
+        btnGuardarArchivos.setBackground(new java.awt.Color(0, 126, 51));
+        btnGuardarArchivos.setText("GUARDAR KOIKA, EMER, COEX");
+        btnGuardarArchivos.setToolTipText("GUARDA CUALQUIER ARCHIVO DE CUALQUIER SERVICIO (KOICA, EMER Y COEX)");
+        btnGuardarArchivos.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.SAVE);
+        btnGuardarArchivos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnImprimir2ActionPerformed(evt);
-            }
-        });
-
-        sComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No. Historia Clinica", "Nombre", "Nombre del Padre" }));
-
-        txtBuscar1.setForeground(new java.awt.Color(0, 126, 51));
-        txtBuscar1.setBorderColor(new java.awt.Color(0, 126, 51));
-        txtBuscar1.setColorIcon(new java.awt.Color(0, 126, 51));
-        txtBuscar1.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.SEARCH);
-        txtBuscar1.setPlaceholder("BUSCAR...");
-        txtBuscar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtBuscar1ActionPerformed(evt);
-            }
-        });
-        txtBuscar1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtBuscar1KeyReleased(evt);
-            }
-        });
-
-        sComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nombre de la Madre", "Residencia", "Médico" }));
-
-        btnImprimir3.setBackground(new java.awt.Color(0, 126, 51));
-        btnImprimir3.setText("GUARDAR COEX");
-        btnImprimir3.setToolTipText("REGISTRAR USUARIO");
-        btnImprimir3.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.SAVE);
-        btnImprimir3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnImprimir3ActionPerformed(evt);
+                btnGuardarArchivosActionPerformed(evt);
             }
         });
 
@@ -293,18 +262,11 @@ public class Crud extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnImprimir1, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnImprimir2, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnImprimir3, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnGuardarArchivos, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(sComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(comboTipodeBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(sComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -315,16 +277,11 @@ public class Crud extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnImprimir1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnImprimir2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(sComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnImprimir3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(comboTipodeBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnGuardarArchivos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(sComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -338,7 +295,10 @@ public class Crud extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(rSPanelShadow1, javax.swing.GroupLayout.PREFERRED_SIZE, 533, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(rSPanelShadow1, javax.swing.GroupLayout.PREFERRED_SIZE, 625, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -383,12 +343,13 @@ public class Crud extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNuevoIngresoActionPerformed
 
     private void txtBuscarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscarKeyReleased
-    Funciones.setListar(txtBuscar.getText());
+        int tipobusqueda = comboTipodeBusqueda.getSelectedIndex();
+        Funciones.setListar(txtBuscar.getText());
     }//GEN-LAST:event_txtBuscarKeyReleased
 
     private void btnImprimir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimir1ActionPerformed
         // TODO add your handling code here:
-        Funciones.setListar(this.txtBuscar.getText());
+        //Funciones.setListar(this.txtBuscar.getText());
         
     }//GEN-LAST:event_btnImprimir1ActionPerformed
 
@@ -396,126 +357,11 @@ public class Crud extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnActualizarActionPerformed
 
-    private void btnImprimir2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimir2ActionPerformed
-        // TODO add your handling code here:
-        //String rutatotal="";
-        //FileDialog dialogoArchivo;
-        //dialogoArchivo = new FileDialog(this, "Lista de Archivos desde Frame",FileDialog.LOAD);
-        //dialogoArchivo.setVisible(true);
-        //if(dialogoArchivo.getFile()!=null)
-        //{ 
-        //    String directorio = dialogoArchivo.getDirectory();
-        //    String nombreArchivo =dialogoArchivo.getFile(); 
-        //    rutatotal = directorio + nombreArchivo;
-        //}
-        //else
-        //{
-          //  System.out.println("No Seleccionó Archivo");
-        //}
-        //System.out.println(rutatotal);
-       
-        try {
- 	//Leemos el pdf que nos servirá como plantilla
-        for(int i=1;i<=30000;i++)
-        {
-
-        PdfReader reader = new PdfReader("C:\\ADMIN\\  ("+i+").pdf");
-        
-        
-	// Creamos el pdf de salida
-        //PdfStamper stamp = new PdfStamper(reader, new
-       	//		FileOutputStream("C:\\ADMIN\\IMPRIMIRADMISION.pdf"));
-            AcroFields form1 = reader.getAcroFields();
-            Sentencias s = new Sentencias();
-            //txtaux.setText(form1.getField("Historia Clinica"));
-            s.setId("1");
-            s.setHistoriaClinica(form1.getField("Historia Clinica"));
-            s.setApellido1(form1.getField("APELLIDO 1"));
-            s.setApellido2(form1.getField("APELLIDO 2"));
-            s.setApellido3(form1.getField("APELLIDO 3"));
-            s.setNombres(form1.getField("NOMBRES"));
-            s.setSexo(form1.getField("Sexo"));
-            
-            if(form1.getField("Años")==""){
-                s.setEdad(null);
-            }
-            else 
-            {
-                s.setEdad(form1.getField("Años"));
-            }
-            if(form1.getField("Meses")==""){
-                s.setEdadmeses(null);
-            }
-            else 
-            {
-                s.setEdadmeses(form1.getField("Meses"));
-            }
-            if(form1.getField("Días")==""){
-                s.setEdaddias(null);
-            }
-            else 
-            {
-                s.setEdaddias(form1.getField("Días"));
-            }
-            s.setConyuge(form1.getField("Conyugue"));
-            s.setFechanacimiento(form1.getField("FECHA DE NACIMIENTO"));
-            s.setLugardenacimiento(form1.getField("LUGAR DE NACIMIENTO"));
-            s.setNacionalidad(form1.getField("NACIONALIDAD"));
-            s.setDPI(form1.getField("DOCUMENTO DE IDENTIFICACIÓN"));
-            s.setEstadocivil(form1.getField("Estado Civil"));
-            s.setGrupoetnico(form1.getField("Grupo Étnico"));
-            s.setReligion(form1.getField("Religión"));
-            s.setAfiliadoaligss(form1.getField("Afiliado al IGSS"));
-            s.setNumerotelefono(form1.getField("Numero de Telefono"));
-            s.setEscolaridad(form1.getField("Escolaridad"));
-            s.setProfesion(form1.getField("PROFESIÓNOFICIOOCUPACIÓN"));
-            s.setLugardetrabajo(form1.getField("LUGAR DONDE TRABAJA"));
-            s.setResidencia(form1.getField("DIRECCIÓN PACIENTE"));
-            s.setNombrepadre(form1.getField("NOMBRE DEL PADRE"));
-            s.setPadrevivo(form1.getField("Padre"));
-            s.setNombremadre(form1.getField("Nombre de la Madre"));
-            s.setMadreviva(form1.getField("Madre"));
-            s.setEncargado(form1.getField("Responsable"));
-            s.setDireccionencargado(form1.getField("DIRECCIÓN PACIENTE"));
-            s.setClasedeadmision(form1.getField("Clase Admisión"));
-            s.setServiciodeingreso(form1.getField("Servicio"));
-            s.setFecha(form1.getField("Fecha"));
-            s.setHora(form1.getField("Hora"));
-            s.setMedico(form1.getField("Médico que ingresa"));
-            s.setAdmitidopor(form1.getField("Documenta"));
-            s.setTipodeadmision(form1.getField("Tipo Ingreso"));
-    
-            
-            if (Funciones.isRegister(s)) {
-                //JOptionPane.showMessageDialog(this, "EL REGISTRO  "+form1.getField("Historia Clinica") +"  FUE GUARDADO CON ÉXITO.", "INFORMACIÓN", JOptionPane.INFORMATION_MESSAGE);
-            } else {
-                System.out.println("ERROR AL INTENTAR REGISTRAR." + i);
-                //JOptionPane.showMessageDialog(this, "ERROR AL INTENTAR REGISTRAR." + i, "ERROR", JOptionPane.ERROR_MESSAGE);
-                }
-            //stamp.setFormFlattening(true);
-            //stamp.close();
-        }
-        
-        
- 
-	}catch (Exception e) {
-		e.printStackTrace();
-	}
-    }//GEN-LAST:event_btnImprimir2ActionPerformed
-
     private void txtBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBuscarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtBuscarActionPerformed
 
-    private void txtBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBuscar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtBuscar1ActionPerformed
-
-    private void txtBuscar1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscar1KeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtBuscar1KeyReleased
-
-    private void btnImprimir3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimir3ActionPerformed
+    private void btnGuardarArchivosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarArchivosActionPerformed
         // TODO add your handling code here:
         // TODO add your handling code here:
         //String rutatotal="";
@@ -635,7 +481,7 @@ public class Crud extends javax.swing.JFrame {
 	}catch (Exception e) {
 		e.printStackTrace();
 	}
-    }//GEN-LAST:event_btnImprimir3ActionPerformed
+    }//GEN-LAST:event_btnGuardarArchivosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -677,11 +523,11 @@ public class Crud extends javax.swing.JFrame {
     private rsmaterialcomponents.RSButtonMaterialIconUno btnActualizar;
     private rsmaterialcomponents.RSButtonIconUno btnCerrar;
     private rsmaterialcomponents.RSButtonMaterialIconUno btnEditar;
+    private rsmaterialcomponents.RSButtonMaterialIconUno btnGuardarArchivos;
     private rsmaterialcomponents.RSButtonMaterialIconUno btnImprimir1;
-    private rsmaterialcomponents.RSButtonMaterialIconUno btnImprimir2;
-    private rsmaterialcomponents.RSButtonMaterialIconUno btnImprimir3;
     private rsmaterialcomponents.RSButtonMaterialIconUno btnNuevo;
     private rsmaterialcomponents.RSButtonMaterialIconUno btnNuevoIngreso;
+    private org.bolivia.combo.SComboBox comboTipodeBusqueda;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -690,10 +536,7 @@ public class Crud extends javax.swing.JFrame {
     private javax.swing.JPanel menu;
     private rsmaterialcomponents.RSLabelIcon rSLabelIcon1;
     private rojeru_san.RSPanelShadow rSPanelShadow1;
-    private org.bolivia.combo.SComboBox sComboBox1;
-    private org.bolivia.combo.SComboBox sComboBox2;
     public static rojerusan.RSTableMetro tabla;
     private rsmaterialcomponents.RSTextFieldIconUno txtBuscar;
-    private rsmaterialcomponents.RSTextFieldIconUno txtBuscar1;
     // End of variables declaration//GEN-END:variables
 }
